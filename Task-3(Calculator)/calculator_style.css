@@ -7,15 +7,17 @@ body{
     min-height: 100vh;
     user-select: none;
     background: #ecf0f3;
-        margin: 0;
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url(Task-3(Calculator)/numbers.jpg'); /* Replace with your image path */
+    background-image: url('http://www.pixelstalk.net/wp-content/uploads/2016/05/Math-Mathematics-Formula-Wallpaper-for-PC.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity for dullness */
+    z-index: 1;
 }
 
 .container{
@@ -23,6 +25,15 @@ body{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Ensure the container is above the overlay */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: to make the background semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .content{
@@ -89,50 +100,7 @@ body{
     color: #fff;
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: to make the background semi-transparent */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.display {
-    margin-bottom: 10px;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.5em;
-    text-align: right;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.btns {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-}
-
-button {
-    padding: 15px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    border: none;
-    background-color: #f1f1f1;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-button:hover {
-    background-color: #ddd;
-}
-
-button:active {
-    background-color: #ccc;
-}
-
 #ce:hover{
     box-shadow: inset 5px 5px 8px #ff3838, inset -5px -5px 8px #ff3838;
 }
+
